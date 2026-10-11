@@ -20,7 +20,7 @@ it('does not bypass campus release validation when page build metadata is absent
     release: { schemaVersion: 1, host: 'UMN-VR/other', artifacts: [] },
     builtFrom: null,
     identity: { build: '', source: 'unavailable', bundle: 'unavailable' },
-  })).toThrow('Expected the campus tour release');
+  })).toThrow('Expected a campus App/scene release');
 });
 it('keeps real credits and unfinished accessibility visible in the shared About panel', () => {
   const handle = createCampusAboutPanel({
