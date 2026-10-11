@@ -31,12 +31,9 @@
     "dist",
     "docs",
     "README.md",
-    "CONTRIBUTING.md",
     "AGENTS.md",
     "SOURCE_PROVENANCE.json",
-    "CODE_OF_CONDUCT.md",
-    "LICENSE",
-    "SECURITY.md"
+    "LICENSE"
   ],
   "migration": {
     "state": "SOURCE_ONLY; independent Campus host graph support and exact About75277f adoption; own declarations/CI queued",

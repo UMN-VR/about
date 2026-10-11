@@ -31,9 +31,9 @@ describe('campus release adaptation through the real shared metadata validator',
     expect(result.installedArtifacts.map(artifact => artifact.repository)).toEqual(['UMN-VR/tour']);
   });
   it('keeps date-derived source versions distinct from the installed artifact package version', () => {
-    const page = { ...builtFrom, app: { ...builtFrom.app, version: '26.10.8.1' } };
+    const page = { ...builtFrom, app: { ...builtFrom.app, version: '26.10.08.#1' } };
     const result = campusAboutData({ release, builtFrom: page });
-    expect(result.builtFrom.app.version).toBe('26.10.8.1');
+    expect(result.builtFrom.app.version).toBe('26.10.08.#1');
     expect(result.builtFrom.app.artifact.version).toBe('0.1.0');
   });
   it('rejects conflicting source pins and flight/setup dependencies', () => {
