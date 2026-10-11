@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "id": "campus-about-actual-local-ref-inventory-source-preparation",
+    "location": "."
+  },
+  "refs": [
+    {
+      "name": "refs/heads/main",
+      "oid": "bc07c07d865196907a4cbd0d892dd9308c7ef48d"
+    }
+  ]
+}

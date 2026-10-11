@@ -2,24 +2,15 @@
   "schemaVersion": 1,
   "owner": "UMN-VR",
   "status": "proposed-not-live",
-  "date": "2026-10-08",
+  "date": "2026-10-10",
   "arrowDirection": "consumer-to-dependency",
-  "title": "UMN VR · repository split",
-  "summary": "Campus experience, media and shared globe dependencies. No flight code or tooling.",
+  "title": "UMN VR \u00b7 repository split",
+  "summary": "Approved independent architecture; source prepared, compiled/bootstrap/publication gates pending. Proposal nodes do not declare installed artifacts.",
   "sourceDocument": "repository-graphs.md",
   "sourceLabel": "UMN ownership and regeneration",
   "dataFile": "repository-split-graph.json",
-  "relatedGraphs": [
-    {
-      "label": "FOSS Earth graph",
-      "href": "../../../../foss-earth/docs/proposals/repository-split-graph.html"
-    },
-    {
-      "label": "0sfs graph",
-      "href": "../../../../0sfs/docs/proposals/repository-split-graph.html"
-    }
-  ],
-  "ownershipNote": "The campus application consumes FOSS Earth shared packages. It has no dependency on 0sfs code, content, documentation or tooling.",
+  "relatedGraphs": [],
+  "ownershipNote": "UMN owns campus and club content. Shared globe contracts stay with FOSS Earth. This authored proposal is distinct from resolved installed dependencies.",
   "scope": {
     "owner": "UMN-VR",
     "allowedOwners": [
@@ -70,7 +61,7 @@
     },
     {
       "id": "deferred",
-      "title": "Deferred TODOs · later work",
+      "title": "Deferred TODOs \u00b7 later work",
       "note": "Search and VR are recorded for later. Do not provision or implement these repositories during the split; current tab counts are unchanged."
     }
   ],
@@ -81,7 +72,7 @@
       "owner": "UMN-VR",
       "group": "applications",
       "tab": "Club website / tour entry",
-      "detail": "UMN VR club landing pages and entry/deployment of a pinned campus-tour release.",
+      "detail": "Existing club identity and one canonical publisher for the selector and three exact compiled scene artifacts.",
       "existing": true
     },
     {
@@ -90,27 +81,28 @@
       "owner": "UMN-VR",
       "group": "applications",
       "tab": "Campus tour",
-      "detail": "Proposed campus-tour runtime extraction: pages, placements, platform-specific import, accessibility, campus branding and app-owned developer contributions.",
-      "note": "The tour supplies its resolved release manifest to UMN-VR/about and registers its own Dev contributions. It depends on no 0sfs package."
+      "detail": "Runtime-free flat selector and immutable workspace/release/routing manifest.",
+      "note": "Links three independent scene routes; no current runtime/photos/importer."
     },
     {
       "id": "about",
       "name": "UMN-VR/about",
       "owner": "UMN-VR",
       "group": "applications",
-      "tab": "About · campus content and graph adapter",
-      "detail": "Campus About tab composition, project information, links/credits, authored dependency-graph metadata and adapter for the installed tour release manifest. Consumes the shared FOSS Earth About viewer.",
-      "note": "The tour build supplies resolved versions and provenance as data. About never imports the tour runtime or owns its release pins; generic graph layout, schema and validation stay in foss-earth/about."
+      "tab": "About \u00b7 campus content and graph adapter",
+      "detail": "Campus credits and exact resolved App/scene release graph adapter over shared About.",
+      "note": "Receives actual qualified host/package/content/tool facts, never runtime discovery."
     },
     {
       "id": "media",
-      "name": "UMN-VR/twin-cities-content",
+      "name": "UMN-VR/app retained legacy media release",
       "owner": "UMN-VR",
       "group": "content",
       "tab": "Campus scene/media",
-      "detail": "Optional independently published scene and photographs. Versioned external hosting can implement the same boundary without another repository.",
-      "kind": "content",
-      "optional": true
+      "detail": "One legacy prepared release/sheet/cell map; child-owned media selections, no duplicated sheet or child-to-aggregate cycle.",
+      "kind": "contract",
+      "optional": true,
+      "note": "No separate empty media repo. Full62582-file scan/transfer/public transport seal queued; legacy scene bytes preserved."
     },
     {
       "id": "manifest",
@@ -144,7 +136,7 @@
       "name": "foss-earth/engine",
       "owner": "foss-earth",
       "group": "shared",
-      "tab": "Map · Location",
+      "tab": "Map \u00b7 Location",
       "detail": "Proposed shared globe-engine extraction: terrain, imagery, coordinates, authoritative surface queries, globe camera/input and world integration. It consumes the shared renderer for scene/device/frame services.",
       "note": "Globe code owns maps and surface queries. Renderer owns device, scene, backends and frame scheduling; its API has no import back into the globe engine."
     },
@@ -153,7 +145,7 @@
       "name": "foss-earth/ui",
       "owner": "foss-earth",
       "group": "shared",
-      "tab": "Interface · Settings · Bug report",
+      "tab": "Interface \u00b7 Settings \u00b7 Bug report",
       "detail": "Generic windows/tabs, settings registry/types/widgets, contribution registration, status log and report contracts. Each host registers its own feature catalogs and callbacks.",
       "note": "UI imports neither globe/renderer implementations nor flight/campus packages. Toolbar and feature panels consume its primitives. Shared ?dev=1 plumbing activates only host-registered developer contributions."
     },
@@ -162,7 +154,7 @@
       "name": "foss-earth/about",
       "owner": "foss-earth",
       "group": "shared",
-      "tab": "About · generic graph viewer",
+      "tab": "About \u00b7 generic graph viewer",
       "detail": "Shared build identity/provenance and dependency graph viewer. Reads a host-supplied manifest without importing any described runtime.",
       "note": "Viewer code belongs to FOSS Earth; application-branded data, release pins and graph content belong to each application."
     },
@@ -171,7 +163,7 @@
       "name": "foss-earth/sky",
       "owner": "foss-earth",
       "group": "shared",
-      "tab": "Sky · Date and time",
+      "tab": "Sky \u00b7 Date and time",
       "detail": "Shared astronomy, clear atmosphere, stars, physical lighting and optional renderer/panels.",
       "note": "Terrain-lighting, settings and scene-time ports are supplied by the host. No import back into globe engine and no flight dependency."
     },
@@ -182,7 +174,8 @@
       "group": "shared",
       "tab": "Weather",
       "detail": "Canonical world weather definition, sampling, sources, optional rendering and shared panel. Aircraft samples and visuals consume one field.",
-      "note": "The larger weather model is a specification, not a completed extraction. Core imports neither globe runtime nor JSBSim."
+      "note": "Excluded from current App dependencies; future inclusion needs explicit approval/qualification.",
+      "optional": true
     },
     {
       "id": "scenes",
@@ -198,7 +191,7 @@
       "name": "foss-earth/360",
       "owner": "foss-earth",
       "group": "image-formats",
-      "tab": "Active 360 image · 360 image settings",
+      "tab": "Active 360 image \u00b7 360 image settings",
       "detail": "Top-level 360-image viewer, orb/immersion presentation, entry/exit and motion/input through supplied ports, representation registration and preparation-tool composition.",
       "note": "Consumes independent image structures and shared resource services. It never imports scene, globe, campus or flight implementations."
     },
@@ -216,7 +209,7 @@
       "name": "foss-earth/equirectangular",
       "owner": "foss-earth",
       "group": "image-formats",
-      "tab": "Image structure · whole equirectangular",
+      "tab": "Image structure \u00b7 whole equirectangular",
       "detail": "Full 2:1 spherical image records/schema, direction-to-UV mapping, seam/pole handling, estimates, loading/sampling, preparation and validation.",
       "note": "Pure core and preparation entry points are separate from the GPU adapter. JPEG and PNG are codecs for this same spatial structure."
     },
@@ -225,7 +218,7 @@
       "name": "foss-earth/cubemap",
       "owner": "foss-earth",
       "group": "image-formats",
-      "tab": "Image structure · whole six-face cube",
+      "tab": "Image structure \u00b7 whole six-face cube",
       "detail": "Six named cube faces, orientation conventions, direction lookup, seam filtering, estimates, preparation and whole-cube loading/sampling.",
       "note": "Exports pure face geometry for tiled-cubemap and preview-sheets. It never imports those consumers or the 360 viewer."
     },
@@ -234,7 +227,7 @@
       "name": "foss-earth/tiled-cubemap",
       "owner": "foss-earth",
       "group": "image-formats",
-      "tab": "Image structure · tiled cube, EAC and gnomonic",
+      "tab": "Image structure \u00b7 tiled cube, EAC and gnomonic",
       "detail": "Six face quadtrees, tile addressing/LOD/selection, scheduler, cancellation/residency, GPU atlas/display table, preparation and sampling.",
       "note": "Gnomonic and equi-angular are explicit warps of the same stored tile structure. Both use one shared scheduler and the supplied resource broker."
     },
@@ -243,7 +236,7 @@
       "name": "foss-earth/preview-sheets",
       "owner": "foss-earth",
       "group": "image-formats",
-      "tab": "Image structure · packed cube previews",
+      "tab": "Image structure \u00b7 packed cube previews",
       "detail": "Preview-sheet and placement extension, packing/extraction, file checking, shared sheet reads and fallback to the original six face files.",
       "note": "Uses pure cubemap face conventions and common image services. It supplies decoded face regions; cubemap owns GPU upload."
     },
@@ -252,7 +245,7 @@
       "name": "foss-earth/dev",
       "owner": "foss-earth",
       "group": "shared",
-      "tab": "Dev · shared contribution framework",
+      "tab": "Dev \u00b7 shared contribution framework",
       "detail": "Shared developer-tab plumbing, graph/debug widget services and the ?dev=1 activation contract. Hosts register distinct app-owned developer panels.",
       "note": "This framework does not import simulator debug code or a particular tour. Enabling Dev does not create another physics loop."
     },
@@ -275,19 +268,23 @@
     },
     {
       "id": "docs",
-      "name": "UMN-VR/docs",
+      "name": "UMN owner-local documentation",
       "owner": "UMN-VR",
       "group": "knowledge",
       "tab": "Campus/club documentation",
-      "detail": "Tour contributor and user documentation, content preparation, deployments and campus-specific contracts."
+      "detail": "Retained in owners: shared runtime/import in App; child content in each scene; selector/workspace in Tour; graph in About; assembly in club.",
+      "kind": "contract",
+      "note": "No independently maintained documentation catalog requires UMN-VR/docs."
     },
     {
       "id": "research",
-      "name": "UMN-VR/research",
+      "name": "UMN-VR/app campus research",
       "owner": "UMN-VR",
       "group": "knowledge",
       "tab": "Campus content research",
-      "detail": "Campus capture/content studies and accessibility/user findings. Generic panorama rendering research remains FOSS Earth-owned."
+      "detail": "Retained App media/accessibility/performance studies; authored placements remain child-owned; generic renderer/image research stays Earth-owned.",
+      "kind": "contract",
+      "note": "No independently maintained research catalog requires UMN-VR/research. Accessibility and missing media work remain unfinished."
     },
     {
       "id": "policy",
@@ -329,7 +326,7 @@
       "name": "foss-earth/search",
       "owner": "foss-earth",
       "group": "deferred",
-      "tab": "Search · deferred TODO",
+      "tab": "Search \u00b7 deferred TODO",
       "deferred": true,
       "detail": "Deferred TODO: shared Search tab for finding registered tabs, settings, actions and feature content in each host. Results open their existing home. Not implemented or provisioned during this migration.",
       "note": "Hosts supply feature metadata/providers; Search consumes UI contracts without importing every feature or downstream application. Excluded from current tab counts and migration acceptance."
@@ -339,10 +336,50 @@
       "name": "foss-earth/vr",
       "owner": "foss-earth",
       "group": "deferred",
-      "tab": "VR support · deferred TODO",
+      "tab": "VR support \u00b7 deferred TODO",
       "deferred": true,
       "detail": "Deferred TODO: shared immersive-session, tracked-view/input and UI/render integration for Earth, UMN and flight. Hosts supply scene/navigation ports. No implementation or provisioning in this migration.",
       "note": "VR UI/tab presentation and concrete APIs remain later design work. Renderer must not import this adapter; shared VR never imports flight or campus. No current headset support is claimed."
+    },
+    {
+      "id": "app",
+      "name": "UMN-VR/app",
+      "owner": "UMN-VR",
+      "group": "applications",
+      "tab": "Shared Campus App",
+      "detail": "One runtime/shell/composition; injected scenes and independent public providers."
+    },
+    {
+      "id": "minneapolis",
+      "name": "UMN-VR/minneapolis",
+      "owner": "UMN-VR",
+      "group": "content",
+      "tab": "minneapolis",
+      "detail": "48 explicit authored panorama/placement records and thin App route."
+    },
+    {
+      "id": "st-paul",
+      "name": "UMN-VR/st-paul",
+      "owner": "UMN-VR",
+      "group": "content",
+      "tab": "st-paul",
+      "detail": "12 explicit authored panorama/placement records and thin App route."
+    },
+    {
+      "id": "twin-cities",
+      "name": "UMN-VR/twin-cities",
+      "owner": "UMN-VR",
+      "group": "content",
+      "tab": "twin-cities",
+      "detail": "Exact child pins/order/overview/fourcross-campus mappings; one viewer/no child runtime or photo copies."
+    },
+    {
+      "id": "browser-testing",
+      "name": "UMN-VR/browser-testing",
+      "owner": "UMN-VR",
+      "group": "knowledge",
+      "tab": "Campus verification",
+      "detail": "Campus assertions/routes/fixtures over the qualified public shared helper."
     }
   ],
   "edges": [
@@ -353,19 +390,19 @@
       "reason": "Publishes/links the pinned campus-tour release; club pages remain independently owned."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "earth",
       "type": "code",
-      "reason": "Tour consumes generic public modules and supplies its own campus data/contributions."
+      "reason": "App consumes generic public modules and supplies its own campus data/contributions."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "interface",
       "type": "code",
-      "reason": "Tour consumes generic public modules and supplies its own campus data/contributions."
+      "reason": "App consumes generic public modules and supplies its own campus data/contributions."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "about",
       "type": "code",
       "reason": "Registers the campus-owned About tab and supplies the installed tour release manifest."
@@ -390,10 +427,10 @@
       "label": "UMN build metadata"
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "earth-dev",
       "type": "code",
-      "reason": "Tour consumes generic public modules and supplies its own campus data/contributions."
+      "reason": "App consumes generic public modules and supplies its own campus data/contributions."
     },
     {
       "from": "tour",
@@ -403,11 +440,10 @@
       "label": "UMN build metadata"
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "media",
       "type": "content",
-      "reason": "Optional versioned campus scene/media origin.",
-      "optional": true
+      "reason": "Optional versioned campus scene/media origin. This prepared-content release is an optional delivery boundary."
     },
     {
       "from": "earth",
@@ -473,20 +509,18 @@
       "from": "media",
       "to": "scenes",
       "type": "reference",
-      "reason": "Campus media build uses scene manifest/reference and representation-file validation.",
-      "label": "scene checks",
-      "optional": true
+      "reason": "Campus media build uses scene manifest/reference and representation-file validation. This prepared-content release is an optional delivery boundary.",
+      "label": "scene checks"
     },
     {
       "from": "media",
       "to": "images360",
       "type": "reference",
-      "reason": "Campus preparation uses the 360 tool entry points that compose independent image representations.",
-      "label": "image preparation",
-      "optional": true
+      "reason": "Campus preparation uses the 360 tool entry points that compose independent image representations. This prepared-content release is an optional delivery boundary.",
+      "label": "image preparation"
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "installer",
       "type": "reference",
       "reason": "Tour contributor documentation points to the campus-owned CLI; no runtime dependency.",
@@ -507,7 +541,7 @@
       "label": "shared checks"
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "earth-ci",
       "type": "reference",
       "reason": "Local pinned workflow calls generic shared checks and retains UMN-specific tests.",
@@ -604,7 +638,7 @@
       "reason": "Toolbar layout and registered item controls use generic UI primitives."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "toolbar",
       "type": "code",
       "reason": "Application host registers toolbar callbacks/values without moving its feature implementations into the toolbar."
@@ -728,7 +762,7 @@
       "reason": "Consumes pure face conventions and cube geometry; no whole-cube acquisition or reverse format dependency."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "search",
       "type": "code",
       "deferred": true,
@@ -760,7 +794,7 @@
       "reason": "Deferred; not a migration dependency. Shared VR presents shared UI through public contracts."
     },
     {
-      "from": "tour",
+      "from": "app",
       "to": "earth-vr",
       "type": "code",
       "deferred": true,
@@ -794,6 +828,54 @@
       "type": "reference",
       "reason": "Pinned shared authorship checks and component-specific installer tests.",
       "label": "shared checks"
+    },
+    {
+      "from": "minneapolis",
+      "to": "app",
+      "type": "code",
+      "reason": "Thin route consumes the shared Campus App."
+    },
+    {
+      "from": "st-paul",
+      "to": "app",
+      "type": "code",
+      "reason": "Thin route consumes the shared Campus App."
+    },
+    {
+      "from": "twin-cities",
+      "to": "app",
+      "type": "code",
+      "reason": "Thin route consumes the shared Campus App."
+    },
+    {
+      "from": "twin-cities",
+      "to": "minneapolis",
+      "type": "content",
+      "reason": "Exact child pins/media bases, no copies."
+    },
+    {
+      "from": "twin-cities",
+      "to": "st-paul",
+      "type": "content",
+      "reason": "Exact child pins/media bases, no copies."
+    },
+    {
+      "from": "site",
+      "to": "minneapolis",
+      "type": "content",
+      "reason": "Canonical publication of exact compiled route artifacts."
+    },
+    {
+      "from": "site",
+      "to": "st-paul",
+      "type": "content",
+      "reason": "Canonical publication of exact compiled route artifacts."
+    },
+    {
+      "from": "site",
+      "to": "twin-cities",
+      "type": "content",
+      "reason": "Canonical publication of exact compiled route artifacts."
     }
   ]
 }

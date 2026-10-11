@@ -1,0 +1,20 @@
+{
+  "owner": "UMN-VR/about",
+  "sourceRepository": "UMN-VR/UMN-VR.github.io",
+  "originalSourceRevision": "306d0c301da351e0573854d99b1c284a772f4957",
+  "coordinatorCleanSourceRevision": "638077b90594164739116575510779cdaa55c20c",
+  "extractionBaseline": "bc07c07d865196907a4cbd0d892dd9308c7ef48d",
+  "method": "Git fast-export/import with authored graph/documentation paths selected; human author and committer headers preserved",
+  "paths": [
+    "docs/proposals/repository-split-graph.json",
+    "docs/proposals/repository-graphs.md"
+  ],
+  "acceptance": "Staging authored metadata; shared About public contract/pin, checks and admission pending",
+  "localMigrationSource": {
+    "method": "Reviewed maintained About source overlay on the complete existing human graph-history parent; current content/release adapter sources are newly authored migration code, not asserted to exist in that parent.",
+    "humanParent": "bc07c07d865196907a4cbd0d892dd9308c7ef48d",
+    "historicalExtractionReceipt": "Existing extraction fields above identify retained graph/documentation ancestry; current source bytes are recorded separately by coordinator staging manifest.",
+    "identityPolicy": "Use an actual reviewed local migration commit from the existing human Git identity; preserve the original index and main branch; record dirty status honestly.",
+    "publication": "Local migration source only; remote admission and publication are not claimed."
+  }
+}
