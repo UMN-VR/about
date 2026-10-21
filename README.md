@@ -12,7 +12,8 @@ interpretable. Current releases reject Earth website runtime wrappers and deferr
 or flight dependencies. `./panel` composes credits and truthful limitations with
 host-injected shared About/published-site ports; absent build metadata stays absent.
 
-The shared About input is pinned to `75277f70092cd8d18679f87a94361f83c779c6ad`.
+The shared About input is pinned to `ab9470d33b1c9913d6ee8e7c50baa4f85c583b5f`
+so future builds use `YY.MM.DD#N`; earlier build records remain unchanged.
 Its public Vite build provenance export is used by App; worker/update machinery
 requires a separate public producer. Current adapter tests/declarations/packaged
 output and ten-owner conformance remain queued. Inherited dist/lock evidence is
