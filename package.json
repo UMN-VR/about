@@ -7,6 +7,7 @@
     "eslint": "9.39.4",
     "globals": "17.6.0",
     "jsdom": "29.1.1",
+    "tsrs": "0.23.0-ts7.1.0-beta",
     "typescript": "5.9.3",
     "vitest": "4.1.6",
     "vite": "8.3.4"
@@ -54,7 +55,7 @@
     "ci": "npm run check:conformance && npm run check:implementation",
     "lint": "eslint . --cache --cache-strategy content --cache-location node_modules/.cache/eslint/",
     "test": "vitest run --maxWorkers=50%",
-    "typecheck": "tsc -p tsconfig.json --incremental --tsBuildInfoFile node_modules/.tmp/about.tsbuildinfo"
+    "typecheck": "tsrs -p tsconfig.json --incremental --tsBuildInfoFile node_modules/.tmp/about.tsbuildinfo"
   },
   "type": "module",
   "version": "0.1.0"
